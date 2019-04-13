@@ -1,5 +1,5 @@
 mod 'puppet-nginx'
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/concat'
-mod 'pltraning/docheragent'
-mod 'garethr/docker'
+mod 'pltraning/dockeragent'
+mod 'puppetlabs-docker'
