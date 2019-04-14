@@ -1,3 +1,3 @@
-class profile::web {
+calss profile::web {
   include nginx
 }
