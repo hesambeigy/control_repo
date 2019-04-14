@@ -1,3 +1,3 @@
-calss profile::web {
-include enginx
+class profile::web {
+  include nginx
 }
