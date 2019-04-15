@@ -1,15 +1,15 @@
 class profile::ssh_server {
-  package { 'openssh-server':
-            ensure => present,
+  package {'openssh-server':
+    ensure => present,
   }
   service { 'sshd':
-           ensure =>'running',
-           enable = 'true',
+    ensure => 'running',
+    enable => 'true',
   }
   ssh_authorized_key { 'root@master.puppet.vm':
-          ensure => present,
-          user   => 'root',
-          type => 'sssh-rsa',
+    ensure => present,
+    user   => 'root',
+    type   => 'ssh-rsa',
           key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDbIf7iXxnDm53bWe56jjZ7XFJsvx/8rMPKZD57Z8q1kYtoVb+4mN4OVsK+fFtYk1HDcwhXA1N6SHt3YhWlP6VQMkCmTcWMVLN6bRXE2VdkWcZYMc38YHXYdfu/AXU4tRLtaNqr5jb5K1xD81do/DOSiO131O2ilNUOmgfCjisqwJomYE1JlIg3EENMeQsVsoM1ggjTkx5t3c2ensWIWwDgAALhZn11mHlTgoZ1oau29nm9gFo93h7zGC61KpZe/xubpSAzhJlhvRLAKo2FHOM1S+vXkpEZUgKmsQ8W8inl49Ssr8eVoqnigYIIyo0/JUkcka66Tc/yWa6SdSK37G2f',
   }
 }  
